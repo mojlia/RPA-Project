@@ -1,0 +1,8 @@
+Key,Value,Note
+emailName,rpa4.maids.cc@gmail.com,email name that the robot will use
+emailPassword,********,email password
+hidemeUsername,rpaTest253272,username of hide.me account to signup or login
+hidemePassword,Rpa@test@27382731,password of hide.me account
+outputFolder,C:\Users\abdul\Downloads\output,the output folder thatt contains the process result files
+screenshotsFolder,C:\Users\abdul\Downloads\output\screenshots,this folder contains the error screenshots
+receiverEmails,,receiver's emails that you should send the output files to them

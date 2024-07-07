@@ -1,0 +1,562 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="974.0000000000001,8689" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabf="clr-namespace:UiPath.Mail.Activities.Business.ForEachMail;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>System.Windows</x:String>
+      <x:String>System.Windows.Media.Animation</x:String>
+      <x:String>System.Windows.Media</x:String>
+      <x:String>System.Windows.Threading</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>NPOI.Util</x:String>
+      <x:String>UiPath.UIAutomationNext.Exceptions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Business.ForEachMail</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Windows.Presentation</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>NPOI.OpenXml4Net</AssemblyReference>
+      <AssemblyReference>NPOI.OOXML</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="784,8624" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="captcha_text" />
+      <Variable x:TypeArguments="sd2:DataTable" Name="output_Data" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="smilequeen228@gmail.com" DisplayName="Access my Gmail account" EmailAddress="smilequeen228@gmail.com" sap:VirtualizedContainerService.HintSize="722,1463" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
+      <umab:GmailApplicationCard.Body>
+        <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,1247" sap2010:WorkflowViewState.IdRef="Sequence_24">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <umab:ForEachEmailX DisplayName="Iterate each target email" sap:VirtualizedContainerService.HintSize="626,1159" sap2010:WorkflowViewState.IdRef="ForEachEmailX_1" IncludeSubfolders="False" Mails="[Gmail.Folder(&quot;Inbox&quot;)]" NumberOfEmailsLimit="50" UnreadOnly="True" WithAttachmentsOnly="True">
+              <umab:ForEachEmailX.Body>
+                <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
+                  <ActivityAction.Argument1>
+                    <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="CurrentMail" />
+                  </ActivityAction.Argument1>
+                  <ActivityAction.Argument2>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                  </ActivityAction.Argument2>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,871" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log basic info about current email" sap:VirtualizedContainerService.HintSize="530,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Email '&quot; + CurrentMail.Subject + &quot;' sent on &quot; + CurrentMail.From.DisplayName +&#xA;&quot; &lt;&quot; + CurrentMail.From.Address + &quot;&gt;&quot;]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:LogMessage>
+                    <If Condition="[CurrentMail.Subject.ToLower.Contains(&quot;maids.cc&quot;)]" DisplayName="Check if the subject line contains &quot;attachment&quot;" sap:VirtualizedContainerService.HintSize="530,608" sap2010:WorkflowViewState.IdRef="If_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,342" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <umab:SaveMailAttachmentsX Attachments="{x:Null}" DisplayName="Save the attachments of current email" ExcludeInlineAttachments="False" Filter="*.xlsx" FolderPath="C:\Users\elfaramn\Documents\UiPath\BlankProcess" sap:VirtualizedContainerService.HintSize="434,254" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_1" Message="[CurrentMail]" OverwriteExisting="True">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </umab:SaveMailAttachmentsX>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </umab:ForEachEmailX.Body>
+              <umab:ForEachEmailX.MailFilter>
+                <umabf:MailFilterArgument LogicalOperator="And">
+                  <umabf:MailFilterArgument.Filters>
+                    <scg:List x:TypeArguments="umabf:SingleMailFilterArgument" Capacity="1">
+                      <umabf:SingleMailFilterArgument DateEqualsFilter="{x:Null}" Criteria="Subject" DateFilter="SevenDays" Operator="Contains" Value="maids.cc RPA test" />
+                    </scg:List>
+                  </umabf:MailFilterArgument.Filters>
+                </umabf:MailFilterArgument>
+              </umab:ForEachEmailX.MailFilter>
+            </umab:ForEachEmailX>
+          </Sequence>
+        </ActivityAction>
+      </umab:GmailApplicationCard.Body>
+      <umab:GmailApplicationCard.ClientId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </umab:GmailApplicationCard.ClientId>
+      <umab:GmailApplicationCard.ClientSecret>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </umab:GmailApplicationCard.ClientSecret>
+    </umab:GmailApplicationCard>
+    <ueab:ExcelApplicationCard Password="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="722,2364" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ReadFormatting="Default" ReadOnly="True" ResizeWindow="None" WorkbookPath="config.csv">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,2059" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="username_hideme" />
+              <Variable x:TypeArguments="x:String" Name="userpw_hideme" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;config&quot;).Cell(&quot;B4&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="450,193" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1">
+              <ueab:ReadCellValueX.SaveTo>
+                <OutArgument x:TypeArguments="x:String">[username_hideme]</OutArgument>
+              </ueab:ReadCellValueX.SaveTo>
+            </ueab:ReadCellValueX>
+            <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;config&quot;).Cell(&quot;B5&quot;)]" DisplayName="Read Cell Value" GetFormattedText="False" sap:VirtualizedContainerService.HintSize="450,193" sap2010:WorkflowViewState.IdRef="ReadCellValueX_2">
+              <ueab:ReadCellValueX.SaveTo>
+                <OutArgument x:TypeArguments="x:String">[userpw_hideme]</OutArgument>
+              </ueab:ReadCellValueX.SaveTo>
+            </ueab:ReadCellValueX>
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="explorer.exe" sap:VirtualizedContainerService.HintSize="450,1585" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="8d1b7755-e274-4931-a105-c87469f79cc8" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1304" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="extracted_captcha" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,251" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="8d1b7755-e274-4931-a105-c87469f79cc8" Text="[username_hideme]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://member.hide.me/en/user/login" CVScreenId="f9f8cdbe-f002-4e02-bae6-9ad425aa9cc6" CvElementArea="1438, 596, 990, 126" CvType="InputBox" DesignTimeRectangle="1473, 623, 177, 72" DesignTimeScaleFactor="2" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Username' check:innerText='Username' /&gt;" Guid="b3967f52-a5f5-4a32-b454-555ddc63798d" InformativeScreenshot="6407765344e69ce98bfa68d1346ac0ea.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in | hide.me' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,251" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="8d1b7755-e274-4931-a105-c87469f79cc8" Text="[userpw_hideme]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://member.hide.me/en/user/login" CVScreenId="715f051e-bd18-4b52-9773-b6469d84cc09" CvElementArea="1439, 756, 989, 127" CvType="InputBox" DesignTimeRectangle="1473, 783, 171, 72" DesignTimeScaleFactor="2" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='' check:innerText='Password' /&gt;" Guid="e39f4c61-e531-4160-8aa5-d2ec61587361" InformativeScreenshot="a1acdb1e8b76a8b2a7fd4ebd6c50e35c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in | hide.me' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'Captcha'" sap:VirtualizedContainerService.HintSize="354,204" sap2010:WorkflowViewState.IdRef="GetOCRText_3">
+                      <ui:GetOCRText.OCREngine>
+                        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                          <ActivityFunc.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                          </ActivityFunc.Argument>
+                          <p:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_2" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                        </ActivityFunc>
+                      </ui:GetOCRText.OCREngine>
+                      <ui:GetOCRText.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2df4115b-61aa-47e4-858f-5686afc01112" InformativeScreenshot="24392a169e6ddff4bdf920294bce2c21" Selector="&lt;webctrl id='mtcaptcha-iframe-1' tag='IFRAME' /&gt;&lt;webctrl id='mtcap-image-1' tag='DIV' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:GetOCRText.Target>
+                      <ui:GetOCRText.Text>
+                        <OutArgument x:TypeArguments="x:String">[captcha_text]</OutArgument>
+                      </ui:GetOCRText.Text>
+                    </ui:GetOCRText>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT mtcap-inputtext-1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,288" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="8d1b7755-e274-4931-a105-c87469f79cc8" Text="[captcha_text]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://member.hide.me/en/user/login" CVScreenId="8c1e18c7-4d93-43c7-b235-75421ab450a2" CvElementArea="1644, 1132, 504, 79" CvType="InputBox" DesignTimeRectangle="1649, 1136, 494, 66" DesignTimeScaleFactor="2" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='mtcaptcha-iframe-1' tag='IFRAME' /&gt;&lt;webctrl id='mtcap-inputtext-1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mtcaptcha-iframe-1' tag='IFRAME' /&gt;&lt;webctrl id='mtcap-inputtext-1' tag='INPUT' type='text' class='mtcap-noborder mtcap-inputtext mtcap-inputtext-custom' placeholder='Enter text from image' aaname='' /&gt;" Guid="f9f7e6c4-d4eb-405f-ac52-8c7b4c6c6b29" InformativeScreenshot="9ce0a166cb72f1bf0b6174e9d35d637d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in | hide.me' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log me in'" sap:VirtualizedContainerService.HintSize="354,220" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8d1b7755-e274-4931-a105-c87469f79cc8" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://member.hide.me/en/user/login" CVScreenId="388ab998-fd53-458f-9580-a13dfedff145" CvElementArea="1439, 1290, 986, 130" CvTextArea="1841, 1339, 184, 44" CvTextArgument="Log me in" CvType="Button" DesignTimeRectangle="1443, 1294, 980, 124" DesignTimeScaleFactor="2" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='submit-btn' aaname='Log me in' check:innerText='Log me in' /&gt;" Guid="27dc1e26-19d2-4db6-9a77-44987d26383a" InformativeScreenshot="57c3ff77810e56c14793211d75b2e8dd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in | hide.me' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="bAj1Su1y202dOuOpgbBDAw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAIoSURBVDhPjVNPSBRRGJ91dmbeewNdOkWHDtGxg4fOXpOoQwSpkdBBBKPYgg6RG5aUVERBKSxGlCEpi0UhWKCsUvlnxlmokBIPHYLEtojQrZld4tf3njuzs8VShx9v9vv92fd9840GIPG/YPmfO2wvOCI8PyPcwOVe8KBuABG67ZQaueufELm1MTbsFPjMF4jFIAa/oEmhtgRLy4Ezp9wknPU0kc8J36WIT38Gy76GfjQF89L9PwKCrCa8Uic9zBECPr4C/vJbJOBTq+pko3kkO7vBJz9FnOLdoFWjh1Xh+hDzG5tmOsXcelVEN7AGJ6G3nwZ79DYeUN4yi62aTKEfv1TR+QH+4mtVRMFsaJb+PY2GfW0we+9FnO36M5VZIaEGFZoqYE+XIYfGpwtInrwM/VAHkl094Lk1xZPnVBQgQUU5PIiFYrUFOtmT9zC6B9DQ3ALz4l1Yt8cVZ3n+rpoACb4YXFPGGNjwPIzzGegH2mGcvRXWV0JPTYAEvdtBKZID5RMf1OTNqyNIpvpUiLyh7ZVuhPq/Aqig224wag29UkOUPeutx9UuGOf6wUY8sHy5KaavDVBFWiz27OOUvIl54Q7MKw9VmHnzMczr2SItnRFp48Y45Du2BiaWpUntiWyLFstI9UX9S9QNEPnidv3Ymf1s7M27yuA222npWtCaD+8MdXUDQpjpzG4yL1VCykZHT6O29+CekP9ngITtbGwjs/zAems5JH4DHPGcvmx9vGYAAAAASUVORK5CYII=" InformativeScreenshot="44d45beb3f96e5af1fb2baaf4e391412.jpg" Reference="f8wigSSwskOPn8HZNuG1kA/hiRkUltFsE6SFwIOrA6FSQ" Selector="&lt;html app='chrome.exe' title='Log in | hide.me' /&gt;" Title="Log in | hide.me" Url="https://member.hide.me/en/user/login" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: hide.me VPN" sap:VirtualizedContainerService.HintSize="722,635" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" ScopeGuid="8d81b665-c25f-46e0-b28e-5e685087fec4" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,310" sap2010:WorkflowViewState.IdRef="Sequence_18">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Enable VPN'" sap:VirtualizedContainerService.HintSize="354,220" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8d81b665-c25f-46e0-b28e-5e685087fec4" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CVScreenId="7890f47f-974d-4676-b90a-27191ae2b86c" CvElementArea="302, 780, 607, 98" CvTextArea="516, 812, 186, 34" CvTextArgument="Enable VPN" CvType="Button" DesignTimeRectangle="308, 783, 600, 92" DesignTimeScaleFactor="2" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='btnProtection' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnProtection' role='push button' check:text='Enable VPN' /&gt;" Guid="c3910a64-8152-4651-bd97-e182bb55b548" InformativeScreenshot="1925055511b7720e7cd4ddf07b3a4bcd.png" ScopeSelectorArgument="&lt;wnd app='hide.me.exe' cls='HwndWrapper*' title='hide.me VPN' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="7890f47f-974d-4676-b90a-27191ae2b86c" CvElementArea="302, 780, 607, 98" CvTextArea="516, 812, 186, 34" CvTextArgument="Enable VPN" CvType="Button" DesignTimeRectangle="516, 805, 185, 48" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='btnProtection' /&gt;&lt;ctrl name='Enable VPN' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnProtection' /&gt;&lt;ctrl name='Enable VPN' role='text' automationid='' check:text='Enable VPN' /&gt;" Guid="48f42cd2-f133-447e-87da-dcbaecb0f1a0" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="245, 245, 1216, 1261" FilePath="C:\Program Files (x86)\hide.me VPN\hide.me.exe" IconBase64="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" InformativeScreenshot="2d3aa4b3cb4a16bb0b94f817b49d4417.png" Selector="&lt;wnd app='hide.me.exe' cls='HwndWrapper*' title='hide.me VPN' /&gt;" Title="hide.me VPN" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Generate a Random Name - Fake Name Generator" sap:VirtualizedContainerService.HintSize="722,4074" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="DebuggerApi" ScopeGuid="646b67cc-670b-49ec-9a47-6afbfb33bc7b" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,3833" sap2010:WorkflowViewState.IdRef="Sequence_19">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="name_generator" />
+              <Variable x:TypeArguments="x:String" Name="fake_name" />
+              <Variable x:TypeArguments="x:String" Name="DOB" />
+              <Variable x:TypeArguments="x:String" Name="country_code" />
+              <Variable x:TypeArguments="x:String" Name="phone_number" />
+              <Variable x:TypeArguments="x:String" Name="address" />
+              <Variable x:TypeArguments="x:String" Name="company_name" />
+              <Variable x:TypeArguments="x:String" Name="occupation" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Gender'" sap:VirtualizedContainerService.HintSize="530,227" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="646b67cc-670b-49ec-9a47-6afbfb33bc7b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/" CVScreenId="d43e27a4-39a7-4d8f-872a-70d94d4bf75a" CvElementArea="1378, 607, 406, 56" CvType="InputBox" DesignTimeRectangle="1381, 611, 400, 50" DesignTimeScaleFactor="2" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='gen' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='gen' tag='SELECT' type='' class='' aaname='Gender' /&gt;" Guid="6cd7e745-c2e8-46a3-b084-cfa721089f7c" InformativeScreenshot="592917fa12307621994a80a9be0467bb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="d43e27a4-39a7-4d8f-872a-70d94d4bf75a" CvTextArea="1259, 617, 106, 26" CvTextArgument="Gender" CvType="Text" DesignTimeRectangle="1261, 613, 102, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Gender' check:innerText='Gender' /&gt;" Guid="d25de5fb-87c7-4653-a5d3-a9bd923147d4" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Country'" sap:VirtualizedContainerService.HintSize="530,227" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="646b67cc-670b-49ec-9a47-6afbfb33bc7b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/" CVScreenId="d43e27a4-39a7-4d8f-872a-70d94d4bf75a" CvElementArea="1377, 739, 407, 56" CvType="InputBox" DesignTimeRectangle="1381, 743, 400, 50" DesignTimeScaleFactor="2" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='c' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='c' tag='SELECT' type='' class='' aaname='Country' /&gt;" Guid="20948602-39bc-4f24-8670-b5c3568e4aef" InformativeScreenshot="23e175f7439b526778fedd9988628727.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="d43e27a4-39a7-4d8f-872a-70d94d4bf75a" CvTextArea="1249, 749, 116, 32" CvTextArgument="Country" CvType="Text" DesignTimeRectangle="1251, 745, 112, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Country' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Country' tag='LABEL' type='' class='' check:innerText='Country' /&gt;" Guid="88733428-ef67-438c-a0ba-468ea22cbae4" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Generate'" sap:VirtualizedContainerService.HintSize="530,227" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="646b67cc-670b-49ec-9a47-6afbfb33bc7b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/" CVScreenId="d43e27a4-39a7-4d8f-872a-70d94d4bf75a" CvElementArea="1377, 804, 147, 50" CvTextArea="1391, 817, 120, 24" CvTextArgument="Generate" CvType="Button" DesignTimeRectangle="1381, 809, 141, 44" DesignTimeScaleFactor="2" ElementType="Button" FullSelectorArgument="&lt;webctrl id='genbtn' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='genbtn' tag='INPUT' type='submit' class='button red' aaname='Generate' check:text='Generate' /&gt;" Guid="6dad93e1-f0ad-4dbf-abb7-18816a37e10c" InformativeScreenshot="a6448b6150071dc59ae4760f9bf32363.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NGetText DisplayName="Get Text 'Name'" sap:VirtualizedContainerService.HintSize="530,190" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="646b67cc-670b-49ec-9a47-6afbfb33bc7b" TextString="[fake_name]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/gen-male-us-hu.php" CVScreenId="8aa2fac6-2400-4685-94d3-02c907400954" CvTextArea="1567, 943, 332, 40" CvType="AnyWordGroup" DesignTimeRectangle="1573, 941, 1080, 37" DesignTimeScaleFactor="2" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='' /&gt;" Guid="15c86a5d-cfce-4614-9d86-d284148ed9a9" InformativeScreenshot="7bc904ddabcf8f2cade71f241cf5ee78.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Generate a Random Name - Male, American, Hungary - Fake Name Generator' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'DOB'" sap:VirtualizedContainerService.HintSize="530,190" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="646b67cc-670b-49ec-9a47-6afbfb33bc7b" TextString="[DOB]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/gen-male-us-hu.php" CVScreenId="9c11eba4-4824-4e31-8d69-a2b9b0e20a80" CvTextArea="1941, 665, 196, 28" CvType="AnyWordGroup" DesignTimeRectangle="1943, 659, 710, 40" DesignTimeScaleFactor="2" FullSelectorArgument="&lt;webctrl idx='4' isleaf='1' tag='DD' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='DD' class='' /&gt;" Guid="612ab661-dbee-408b-b9bb-a8db4ca4bd93" ImageBase64="" InformativeScreenshot="6a89fb88ec672f28763a9f8bf3b59646.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Generate a Random Name - Male, American, Hungary - Fake Name Generator' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '36'" sap:VirtualizedContainerService.HintSize="530,190" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="646b67cc-670b-49ec-9a47-6afbfb33bc7b" TextString="[country_code]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/gen-male-us-hu.php" CVScreenId="20e0692c-f90a-4b74-ab51-335d288a1a16" CvTextArea="1941, 521, 34, 28" CvType="AnyWordGroup" DesignTimeRectangle="1943, 515, 710, 40" DesignTimeScaleFactor="2" FullSelectorArgument="&lt;webctrl idx='3' isleaf='1' tag='DD' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='DD' class='' /&gt;" Guid="9957c743-9f36-4b71-8c1b-b17f56ed7fa8" ImageBase64="" InformativeScreenshot="b9b24ff157b7bf37a49eb6ac90f9043a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Generate a Random Name - Male, American, Hungary - Fake Name Generator' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '(1) 461-0800'" sap:VirtualizedContainerService.HintSize="530,190" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="646b67cc-670b-49ec-9a47-6afbfb33bc7b" TextString="[phone_number]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/gen-male-us-hu.php" CVScreenId="0ef50a45-ffab-474f-acbe-e0c32cd8e1e7" CvTextArea="1941, 471, 166, 34" CvType="AnyWordGroup" DesignTimeRectangle="1943, 465, 710, 40" DesignTimeScaleFactor="2" FullSelectorArgument="&lt;webctrl idx='2' isleaf='1' tag='DD' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='DD' class='' /&gt;" Guid="25577b03-0e46-4725-b48d-2a7172d9c1d8" ImageBase64="" InformativeScreenshot="2050b2f3ba1d209ae2f84abf03752c95.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Generate a Random Name - Male, American, Hungary - Fake Name Generator' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Address'" sap:VirtualizedContainerService.HintSize="530,190" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="646b67cc-670b-49ec-9a47-6afbfb33bc7b" TextString="[address]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/gen-male-us-hu.php" DesignTimeRectangle="1573, 284, 1080, 74" DesignTimeScaleFactor="2" FullSelectorArgument="&lt;webctrl class='adr' parentid='details' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='adr' parentid='details' tag='DIV' type='' /&gt;" Guid="0689ee1e-d695-47c9-920b-f4efce4308e6" InformativeScreenshot="010729fabdad7d8aaff0c8f7a56c3f09.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Generate a Random Name - Male, American, Hungary - Fake Name Generator' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Company_name'" sap:VirtualizedContainerService.HintSize="530,190" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="646b67cc-670b-49ec-9a47-6afbfb33bc7b" TextString="[company_name]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/gen-male-us-hu.php" CVScreenId="71da5eb4-8812-4ddd-891c-17905d5ef393" CvTextArea="1941, 1373, 100, 26" CvType="AnyWordGroup" DesignTimeRectangle="1943, 1366, 710, 40" DesignTimeScaleFactor="2" FullSelectorArgument="&lt;webctrl idx='14' isleaf='1' tag='DD' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='DD' class='' /&gt;" Guid="7d4d1909-ced7-4468-8982-33e152c9a5c8" ImageBase64="" InformativeScreenshot="e09280627c6fb74f5da40e2706d675f3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Generate a Random Name - Male, American, Hungary - Fake Name Generator' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Occupation'" sap:VirtualizedContainerService.HintSize="530,190" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="646b67cc-670b-49ec-9a47-6afbfb33bc7b" TextString="[occupation]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.fakenamegenerator.com/gen-male-us-hu.php" CVScreenId="71da5eb4-8812-4ddd-891c-17905d5ef393" CvTextArea="1941, 1423, 472, 32" CvType="AnyWordGroup" DesignTimeRectangle="1943, 1416, 710, 40" DesignTimeScaleFactor="2" FullSelectorArgument="&lt;webctrl idx='15' isleaf='1' tag='DD' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='DD' class='' /&gt;" Guid="e7c962dd-ae12-4f94-807c-7ee34b2a1cb9" ImageBase64="" InformativeScreenshot="bdedde59c3daeb7acd3e36ca80853a87.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Generate a Random Name - Male, American, Hungary - Fake Name Generator' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,1732" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="fake_name_data.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1434" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;data&quot;).Cell(&quot;A2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,193" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[fake_name]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;data&quot;).Cell(&quot;B2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,193" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[DOB]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;data&quot;).Cell(&quot;C2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,193" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[country_code]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;data&quot;).Cell(&quot;D2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,193" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[phone_number]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;data&quot;).Cell(&quot;E2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,193" sap2010:WorkflowViewState.IdRef="WriteCellX_5" Value="[address]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;data&quot;).Cell(&quot;F2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,193" sap2010:WorkflowViewState.IdRef="WriteCellX_6" Value="[company_name]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;data&quot;).Cell(&quot;G2&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,186" sap2010:WorkflowViewState.IdRef="WriteCellX_7" Value="[occupation]" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-13, -13, 3866, 2106" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH3wUcFjkjSdtABwAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJZSURBVEhL7ZbNb9JwGMc9LEoLPynQMrPJyfuSGQ1/gHFuNKKXZdH9DR486nT/wLTiX2C8Gu+e1ADjxUWCQBkQylsBx4tTNFmKdr48oxf4tWsLk4ux+ZzK830+pf097e/UPmKmCi74hJgOYlo2em9MIAJBiGMNRwTwcxsxNWq2MOvh3Z6M25M2AZRBMUQgCHHMgQtEwlG+6vsajvRi8V7UNLH4t+1IeYmFuJ6gixjBQuVXb/+U5d9jHr9kOb+2DnFoMtwTFxQs9sxEAojwa+sQNxakV29NV5CZSDDWLdIQNILhxL0H/Mbmrha5jc3S/Yf5hcui1WnwkI8TZLe4VzPkzpmzCS2SFnvWYq9aXS39ZaojKD0OvCcoEWYKMR9VwElobTxoOoLioyfvTqMy6aiTTnEUONMknW0bjd19BbMC4dnz4MKlD4vejIrsRW9x0Vt1e+BtMfk/kA8OpHa73+58V9Pp9MW6sMTWVGMMmBXoH4eSxLM3S6o1Cvw1QYq9UZyqIH1CAZyRJUmTQ6n/40svt+KvECcQCC9evr7Gxlf8Oz6chM/PL18vnL/QtLkmf8i5Le7NjDU1mFiMnIUSCKphc8GgDXdTMCsoc4EkQTXR0XdRE7h29eUDZgUVLpAiKHgfDNeb4b/AkH9PAOO+q7WrqHFPeYKCfdVwvRlwQZVwFK4s778NdkPbnVAY6IbCnyPRyp27RdIB63243gwjApiUPUQX7e4kPR+j5yIDovRcgp7PO841jvlm6TMiAKBFC9HQq3aES6E+2N4q44rVG4ILFJS5x8BqTIGYP0HPVXjjInEIAAAAAElFTkSuQmCC" InformativeScreenshot="8b4213c4775df99162d9240e4f4517d8.jpg" Selector="&lt;html app='chrome.exe' title='Generate a Random Name - Fake Name Generator' /&gt;" Title="Generate a Random Name - Fake Name Generator" Url="https://www.fakenamegenerator.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
